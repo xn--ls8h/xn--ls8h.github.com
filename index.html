@@ -21,6 +21,10 @@ Thank you for using 💩hub!
 		-webkit-animation-duration: 5s;
 		-webkit-animation-iteration-count: infinite;
 		-webkit-animation-timing-function: linear;
+		animation-name:	rotate;
+		animation-duration: 5s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
 	}
 
 
@@ -33,17 +37,30 @@ Thank you for using 💩hub!
 			-webkit-transform: rotate(360deg);
 		}
 	}
+
+	@keyframes rotate {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
 	body {
 		/* iPhone */
 		background-image: -webkit-gradient(radial, center center, 0, center center, 150, from(#ffffff), to(#e8fffb));
 		/* Desktop */
 		background-image: -webkit-radial-gradient(circle, #ffffff, #e8fffb);
+		/* Everything else */
+		background-image: radial-gradient(circle, #ffffff, #e8fffb);
 
 		display: table;
 		width: 100%;
 		height: 100%;
 		padding: 0;
 		margin: 0;
+		overflow: hidden;
 		-webkit-text-size-adjust: none;
 	}
 
